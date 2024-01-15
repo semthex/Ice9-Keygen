@@ -272,6 +272,9 @@
     <None Include="Keygen_Art.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\x64\Release\Ice9-Keygen.exe" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Keygen_Icon.ico" />
     <Content Include="SharpMikNAudio.dll" />
     <EmbeddedResource Include="NAudio.dll" />
