@@ -33,7 +33,7 @@ Once a valid length is verified, the user-entered name is pushed onto the stack 
 then the serial generation algorithm begins. The serial generation algorithm can be broken down to the following steps:
 
 1. Iterate through each character of the name, ignoring the last character.
-2. If the character's ASCII value is between 0x41 and 0x5A, then a value of 0x2C is added to the modifier. If the character's ASCII value is not within that range, the modifier is incremented by the original ASCII value.
+2. If the character's ASCII value is in the range 0x41 to 0x5A (inclusive), add 0x2C to the ASCII value; otherwise, increment the modifier by the original ASCII value.
 4. The modifier undergoes 4 changes; first it is incremented by 0x29A, then it is multiplied by 0x3039, then it is decremented by 0x17, then lastly it is multiplied by 0x9.
 5. The algorithm repeatedly converts the remainder of the modified value divided by 0xA to its ASCII character representation, prepending it to the serial string, until the modified value becomes 0.
 6. Lastly, the algorithm iterates over the characters of the input name, starting from the fourth character, and appends each character to the previously generated serial key.
